@@ -1,6 +1,6 @@
 {
-    "name": "absolutezeroo/slider-field",
-    "description": "A Laravel Nova field.",
+    "name": "absolutezeroo/nova-slider-field",
+    "description": "A Laravel Nova slider field.",
     "keywords": [
         "laravel",
         "nova"

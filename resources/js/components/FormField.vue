@@ -2,7 +2,15 @@
   <default-field :field="field" :errors="errors">
     <template slot="field">
       <div class="py-2">
-        <vue-slider v-model="value"></vue-slider>
+        <vue-slider
+          v-model="value"
+          :tooltip="field.tooltip || 'always'"
+          :tooltip-placement="field.placementShow || 'top'"
+          :formatter="field.formatter || null"
+          :min="field.min"
+          :max="field.max"
+          :interval="field.interval"
+        ></vue-slider>
       </div>
     </template>
   </default-field>

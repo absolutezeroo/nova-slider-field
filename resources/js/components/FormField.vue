@@ -3,6 +3,7 @@
     <template slot="field">
       <div class="py-2">
         <vue-slider
+          ref="slider"
           v-model="value"
           :tooltip="field.tooltip || 'always'"
           :tooltip-placement="field.placementShow || 'top'"
@@ -21,15 +22,15 @@ import { FormField, HandlesValidationErrors } from 'laravel-nova'
 import VueSlider from 'vue-slider-component'
 
 export default {
-  components: {
+  components : {
     VueSlider
   },
 
-  mixins: [FormField, HandlesValidationErrors],
+  mixins : [FormField, HandlesValidationErrors],
 
-  props: ['resourceName', 'resourceId', 'field'],
+  props : ['resourceName', 'resourceId', 'field'],
 
-  methods: {
+  methods : {
     /*
      * Set the initial, internal value for the field.
      */
